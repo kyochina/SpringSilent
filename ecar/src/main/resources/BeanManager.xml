@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>Spring Quick Start</description>
+    <bean id="upp" class="com.china.terry.action.UppAction">
+        <property name="msg">
+            <value>HeLLo</value>
+        </property>
+    </bean>
+    <bean id="low" class="com.china.terry.action.LowerAction">
+        <property name="msg">
+            <value>HeLLo</value>
+        </property>
+    </bean>
+</beans>
