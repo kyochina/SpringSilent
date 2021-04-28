@@ -1,5 +1,17 @@
-/**
-     *  复制文件
+package com.china.utils.File;
+
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class FileUtil {
+    /**
+     * 复制文件
+     *
      * @param sourceFilePath 原文件路径
      * @param targetFilePath 新文件路径
      * @return boolean 如果新文件大小超过0 ，则复制成功
@@ -17,8 +29,9 @@
     }
 
     /**
-     *  下载网络文件
-     * @param urlPath 文件网络路径
+     * 下载网络文件
+     *
+     * @param urlPath        文件网络路径
      * @param targetFilePath 新文件路径
      * @return boolean 如果新文件大小超过0 ，则复制成功
      * @throws IOException
@@ -38,3 +51,4 @@
         FileUtils.copyURLToFile(url, targetFile);
         return FileUtils.sizeOf(targetFile) > 0;
     }
+}

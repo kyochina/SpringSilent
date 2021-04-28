@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		ApplicationContext ctx=new
-				FileSystemXmlApplicationContext("src/main/resources/BeanManager.xml");
+				FileSystemXmlApplicationContext("class main/resources/BeanManager.xml");
 		UppAction upp = (UppAction)ctx.getBean("upp");
 		System.out.println(upp.exectue());	
 	}
