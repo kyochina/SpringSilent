@@ -1,10 +1,10 @@
-package com.javaOn8;
+package com.china.utils.http;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StreamFilter {
+class StreamFilter {
 	public static void main(String[] args) {
 		List<String> arr = new ArrayList<String>();
 		List<String> out = new ArrayList<String>();
