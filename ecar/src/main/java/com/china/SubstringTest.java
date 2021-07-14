@@ -1,5 +1,9 @@
 package com.china;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Random;
+
 public class SubstringTest {
     public static void main(String[] args) {
         /*String outputStr = "长沙市天心区高云路77号龙湾国际三期测试小区 ";
@@ -8,9 +12,9 @@ public class SubstringTest {
             outputStr=outputStr.substring(0,outputStr.indexOf("小区"));
         }
         System.out.println(outputStr);*/
-        /*String str= "0小区为空";
-        System.out.println(str.substring(0,1));
-        System.out.println(str.substring(1));*/
+        String str= "2525413,2525413";
+        //System.out.println(str.substring(0,1));
+       // System.out.println(str.indexOf("25254131"));
 
         /*String xmlTest =  "<?xml version=\"1.0\" encoding=\"GBK\"?>\n" +
                 "<PGK>\n" +
@@ -19,15 +23,24 @@ public class SubstringTest {
                 "</PGK>";
         String result = xmlTest.substring(xmlTest.indexOf("CDATA[")+6,xmlTest.indexOf("]]"));
         System.out.println(result);*/
-        String payStr = "银行存款账户||厦门望润资产管理有限公司||9020510030010000105962||1300.0||2021/06/23 00:00:00,厦门望润资产管理有限公司-银行存款账户||厦门望润资产管理有限公司||129910100100608603||500.0||2021/06/25 00:00:00\n";
+        /*String payStr = "银行存款账户||厦门望润资产管理有限公司||9020510030010000105962||1300.0||2021/06/23 00:00:00,厦门望润资产管理有限公司-银行存款账户||厦门望润资产管理有限公司||129910100100608603||500.0||2021/06/25 00:00:00\n";
         String []payAccount = payStr.split(",");
         for(String payAcc:payAccount){
             String[] payaccount =payAcc.split("\\|\\|");
             for (String acc:payaccount){
                 System.out.println(acc);
             }
-        }
+        }*/
         //System.out.println(payAccount[0]);
         //System.out.println(payAccount[1]);
+
+
+        for(int i = 0;i<10;i++){
+            Random random = new Random();
+            String datetimeStr = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+            String appNum = datetimeStr + Math.abs(random.nextInt() % 10000);
+            System.out.println(appNum);
+        }
+
     }
 }

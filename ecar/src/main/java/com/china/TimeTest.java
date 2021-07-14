@@ -1,5 +1,7 @@
 package com.china;
 
+import com.china.utils.Date.DateUtil;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -11,18 +13,20 @@ public class TimeTest {
         /*DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S");
         LocalDateTime tranData = LocalDateTime.parse("2021-06-01 17:16:02.0", df);*/
 
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy/MM/dd");
-        SimpleDateFormat sf1 = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = sf.parse("2021/06/27 18:59:53");
-
-
-        String busiDate = sf1.format(date);  //交易日期
+//        SimpleDateFormat sf = new SimpleDateFormat("yyyy/MM/dd");
+//        SimpleDateFormat sf1 = new SimpleDateFormat("yyyy-MM-dd");
+//        Date date = sf.parse("2021/06/27 18:59:53");
+//        String busiDate = sf1.format(date);  //交易日期
 
         /*DateTimeFormatter sf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String busiDate = sf.format(verifyVo.getTranDate());  //交易日期
 
         DateTimeFormatter sf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String busiDate = sf.format(LocalDateTime.now());*/
-        System.out.println(busiDate);
+
+        String testDay = "20211405";
+        DateUtil.isDayFormat(testDay);
+       // String testTime = ""
+        System.out.println(DateUtil.isDayFormat(testDay));
     }
 }
